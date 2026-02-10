@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Valentine's day Vault</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <header>
@@ -14,16 +16,25 @@
   <main>
     <p id="message">Renseigne le bon mot de passe pour entrer dans le coffre, et débloquer des souvenirs.</p>
     <form id="passwordForm">
-      <input type="password" id="passwordInput" placeholder="Entrer le mdp" required>
+      <div style="position: relative; display: inline-block;">
+        <input type="password" id="passwordInput" placeholder="Entrer le mdp" required>
+        <button type="button" id="togglePassword" >
+          <i class="fa-solid fa-eye"></i>
+        </button>
+      </div>
       <button type="submit" id = "openButton">Ouvrir</button>
     </form>
+    <small id="tipPassword">
+      (tout attaché, en minuscule)
+    </small>
 
     <div class="hints">
-      <div class="hint">Le mdp est "t"</div>
-      <div class="hint">Le mdp est "t"</div>
-      <div class="hint">Le mdp est "t"</div>
+      <div class="hint" id = "hint1">Première partie du mot de passe...</div>
+      +
+      <div class="hint" id = "hint2">Deuxième partie du mot de passe...</div>
+      +
+      <div class="hint" id = "hint3">Troisième partie du mot de passe...</div>
     </div>
-
   </main>
 
   <footer>
