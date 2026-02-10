@@ -12,17 +12,24 @@
   </header>
 
   <main>
-    <p id="message">Entre le mot de passe pour entrer dans le coffre, et débloquer des souvenirs!</p>
-    <br>
+    <p id="message">Renseigne le bon mot de passe pour entrer dans le coffre, et débloquer des souvenirs.</p>
     <form id="passwordForm">
-      <input type="password" id="passwordInput" placeholder="Enter password" required>
-      <button type="submit">Unlock</button>
+      <input type="password" id="passwordInput" placeholder="Entrer le mdp" required>
+      <button type="submit" id = "openButton">Ouvrir</button>
+    </form>
+
+    <div class="hints">
+      <div class="hint">Le mdp est "t"</div>
+      <div class="hint">Le mdp est "t"</div>
+      <div class="hint">Le mdp est "t"</div>
+    </div>
+
   </main>
 
   <footer>
     <p>© Steb Industry</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
