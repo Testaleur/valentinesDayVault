@@ -194,3 +194,61 @@ footer {
     transform: scale(1.03);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
+
+/* ---------- RESPONSIVE MOBILE ---------- */
+@media (max-width: 768px) {
+
+  body {
+    padding: 15px;
+  }
+
+  header {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+
+  main {
+    min-height: auto;
+    max-width: 100%;
+  }
+
+  form,
+  #passwordForm {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #passwordInput {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #openButton {
+    width: 100%;
+  }
+
+  #message,
+  #message2,
+  #message3 {
+    font-size: 16px;
+    height: auto;
+    min-height: 60px;
+  }
+
+  .hints,
+  .souvenirs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hint,
+  .souvenir {
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+  }
+
+  .souvenir-image {
+    max-width: 100%;
+  }
+}
