@@ -6,20 +6,43 @@ const form = document.getElementById("passwordForm");
 const input = document.getElementById("passwordInput");
 const message = document.getElementById("message");
 const togglePassword = document.getElementById('togglePassword');
+
+// hints
 const hint1 = document.getElementById('hint1');
 const hint2 = document.getElementById('hint2');
 const hint3 = document.getElementById('hint3');
+var hint1IsRevealed = false;
+var hint2IsRevealed = false;
+var hint3IsRevealed = false;
 
 hint1.addEventListener('click', () => {
-  hint1.textContent = "La série qu'on regardait entre deux parties de SkyTeam.";
+  if(!hint1IsRevealed){
+    hint1.textContent = "La série qu'on regardait entre deux parties de SkyTeam.";
+    hint1IsRevealed = true
+  }else{
+    hint1.textContent = "Première partie du mot de passe...";
+    hint1IsRevealed = false;
+  }
 });
 
 hint2.addEventListener('click', () => {
-  hint2.textContent = "On a parcouru des kilomètres en vélo et bateau pour trouver des chaussures de cette marque... pour rien.";
+  if(!hint2IsRevealed){
+    hint2.textContent = "On a parcouru des kilomètres en vélo et bateau pour trouver des chaussures de cette marque... pour rien.";
+    hint2IsRevealed = true;
+  }else{
+    hint2.textContent = "Deuxième partie du mot de passe...";
+    hint2IsRevealed = false;
+  }
 });
 
 hint3.addEventListener('click', () => {
-  hint3.textContent = "Le nom des vélos qu'on a pris pour se rentre au pays des cailloux et des habitants aux tatamis.";
+  if(!hint3IsRevealed){
+    hint3.textContent = "Le nom des vélos qu'on a pris pour se rentre au pays des cailloux et des habitants aux tatamis.";
+    hint3IsRevealed = true;
+  }else{
+    hint3.textContent = "Troisième partie du mot de passe...";
+    hint3IsRevealed = false;
+  }
 });
 
 togglePassword.addEventListener('click', () => {
